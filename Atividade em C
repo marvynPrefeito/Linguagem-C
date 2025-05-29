@@ -1,0 +1,80 @@
+
+25.
+
+#include <stdio.h>
+
+int main(){
+    float celsius, fahrenheit;
+    
+    printf("Insira a temperatura em celsius: ");
+    scanf("%f", &celsius);
+    
+    fahrenheit = (celsius * 9/5) + 32;
+    
+    printf("%.2f graus celsius = %.2f graus fahrenheit", celsius, fahrenheit);
+    
+    return 0;
+}
+
+27.
+
+#include <stdio.h>
+
+int main(){
+    float preco, infla;
+    
+    printf("Insira o preço do produto: ");
+    scanf("%f", &preco);
+    
+    if(preco < 100 ){
+        infla = preco * 1.10;
+    }else{
+        infla = preco * 1.20;
+    }
+        printf("O novo preço do produto é: %.2f", infla);
+        
+        return 0;
+    }
+
+28.
+
+#include <stdio.h>
+
+int main() {
+    float gasto, valor_final;
+    int op;
+
+    printf(" Bem-vindooo!");
+    printf("\n Insira valor total gasto: ");
+    scanf("%f", &gasto);
+
+    printf("Escolha uma forma de pagamento:");
+    printf("\n 1 - À vista (10%% de desconto)");
+    printf("\n 2 - Em duas vezes (preço da etiqueta)");
+    printf("\n 3 - De 3 até 10 vezes com juros de 10%% (Somente para compras acima de 100 reais)");
+    printf("\n Digite sua opção: ");
+    scanf("%d", &op);
+
+    switch(op) {
+        case 1:
+            valor_final = gasto * 0.90;
+            printf(" Total a pagar com desconto: R$ %.2f\n", valor_final);
+            break;
+        case 2:
+            valor_final = gasto;
+            printf(" Total a pagar: 2 parcelas de R$ %.2f sem juros.\n", valor_final / 2);
+            break;
+        case 3:
+            if (gasto >= 100) {
+                valor_final = gasto * 1.10;
+                printf(" Total a pagar: 3 parcelas de R$ %.2f com juros.\n", valor_final / 3);
+            } else {
+                printf("Opção inválida: compras com parcelamento em até 10x só acima de R$ 100.\n");
+            }
+            break;
+        default: 
+            printf("Opção inválida.\n");
+    }
+
+    return 0;
+}
