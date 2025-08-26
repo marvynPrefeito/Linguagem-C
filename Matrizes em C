@@ -1,0 +1,67 @@
+63. Escreva um programa em C que leia uma matriz 2x2 de números inteiros e depois
+imprima seus elementos na tela.
+
+
+64. Faça um programa em C que leia uma matriz 3x3 de números inteiros e exiba todos
+os elementos da diagonal principal.
+
+
+65. Crie um programa em C que leia uma matriz 2x3 de inteiros e calcule a soma de
+todos os elementos.
+
+#include <stdio.h>
+
+int main() {
+    
+int a = 0;
+int i, j, soma = 0;
+int elemento[6];
+int matriz[2][3];
+printf("Gerador de matrizes 2x3:\n");
+while(a < 6) {
+printf("Digite um elemento da matriz:\n");
+scanf("%d", &elemento[a]);
+a++;
+}
+a = 0;
+for(i = 0; i < 2; i++) {
+for(j = 0; j < 3; j++) {
+matriz[i][j] = elemento[a];
+soma += matriz[i][j];
+a++;
+}
+}
+printf("A matriz digitada foi:\n");
+for(i = 0; i < 2; i++) {
+for(j = 0; j < 3; j++) {
+printf("%d ", matriz[i][j]);
+}
+printf("\n");
+}
+printf("Soma: %d\n", soma);
+return 0;
+}
+
+
+66. Escreva um programa em C que leia uma matriz 3x3 de inteiros e mostre o maior
+valor armazenado.
+
+
+67. Faça um programa em C que leia uma matriz 3x2 de inteiros e conte quantos
+números pares foram digitados.
+
+
+68. Escreva um programa que leia uma matriz 2x2 e troque os valores da primeira linha
+com os da segunda linha.
+
+
+69. Escreva um programa que leia uma matriz 2x3 e imprima seus valores no formato
+de tabela (linhas e colunas).
+
+
+70. Crie um programa em C que leia uma matriz 3x3 e mostre a soma dos elementos de
+cada linha separadamente.
+
+
+71. Escreva um programa que leia uma matriz 2x3 e exiba a matriz transposta (3x2).
+
