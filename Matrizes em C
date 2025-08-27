@@ -58,10 +58,89 @@ com os da segunda linha.
 69. Escreva um programa que leia uma matriz 2x3 e imprima seus valores no formato
 de tabela (linhas e colunas).
 
+#include <stdio.h>
+
+int main() {
+    int matriz[2][3];
+    int i, j;
+
+   
+    printf("Digite os elementos da matriz 2x3:\n");
+    for(i = 0; i < 2; i++) {
+        for(j = 0; j < 3; j++) {
+            printf("Elemento [%d][%d]: ", i, j);
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+
+   
+    printf("\nMatriz 2x3:\n");
+    for(i = 0; i < 2; i++) {
+        for(j = 0; j < 3; j++) {
+            printf("%d\t", matriz[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
 
 70. Crie um programa em C que leia uma matriz 3x3 e mostre a soma dos elementos de
 cada linha separadamente.
 
+#include <stdio.h>
+
+int main() {
+    int matriz[3][3];
+    int i, j, soma;
+
+   
+    printf("Digite os elementos da matriz 3x3:\n");
+    for(i = 0; i < 3; i++) {
+        for(j = 0; j < 3; j++) {
+            printf("Elemento [%d][%d]: ", i, j);
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+
+   
+    for(i = 0; i < 3; i++) {
+        soma = 0;
+        for(j = 0; j < 3; j++) {
+            soma += matriz[i][j];
+        }
+        printf("Soma da linha %d: %d\n", i, soma);
+    }
+
+    return 0;
+}
+
+
 
 71. Escreva um programa que leia uma matriz 2x3 e exiba a matriz transposta (3x2).
 
+int matriz[2][3];
+    int i, j;
+
+   
+
+    printf("Digite os elementos da matriz 2x3:\n");
+    for(i = 0; i < 2; i++) {
+        for(j = 0; j < 3; j++) {
+            printf("Elemento [%d][%d]: ", i, j);
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+
+   
+    printf("\nMatriz transposta (3x2):\n");
+    for(j = 0; j < 3; j++) {
+        for(i = 0; i < 2; i++) {
+            printf("%d\t", matriz[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
